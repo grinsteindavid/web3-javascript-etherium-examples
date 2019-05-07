@@ -27,7 +27,7 @@ const getCurrentGasPrices = async () => {
     return prices
 };
 
-const main = async () => {
+export default async () => {
     const web3 = new Web3API(new Web3API.providers.HttpProvider('https://mainnet.infura.io'));
     const privateKey = "0x..";
     const tokenAddress = "0x..";
@@ -120,6 +120,4 @@ const main = async () => {
             error: error.message
         });
     }
-};
-
-main();
+}

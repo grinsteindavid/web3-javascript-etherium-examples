@@ -1,6 +1,6 @@
 const Web3API = require('web3');
 
-const main = () => {
+export default  () => {
     const web3 = new Web3API(new Web3API.providers.HttpProvider('https://mainnet.infura.io'));
     
     let account = web3.eth.accounts.create(web3.utils.randomHex(32));
@@ -12,6 +12,4 @@ const main = () => {
         wallet: wallet,
         keystore: keystore
     });
-};
-
-main();
+}

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const Web3API = require('web3');
 
-const main = async () => {
+export default async () => {
     const web3 = new Web3API(new Web3API.providers.HttpProvider('https://mainnet.infura.io'));
     const tokenAddress = "0x..";
     const fromAddress = "0x..";
@@ -14,6 +14,4 @@ const main = async () => {
     // How many tokens do I have before sending?
     let balance = await contract.methods.balanceOf(fromAddress).call();
     console.log(`Balance: ${balance}`);
-};
-
-main();
+}
